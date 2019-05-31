@@ -1,0 +1,6 @@
+>HSBGPG Human gene for bone gla protein (BGP)
+Nucleotides count:
+A:217 T:232 C:409 G:373 
+>HSGLTH1 Human theta 1-globin gene
+Nucleotides count:
+A:146 T:155 C:362 G:357 
