@@ -14,7 +14,6 @@ def translate_from_dna_to_rna(dna):
 				else:
 					rna.write(letter)
 		else: rna.write(line.rstrip() + " " + 'RNA:' + '\n')
-	return rna
 	rna.close()
 
 
@@ -38,7 +37,6 @@ def count_nucleotides(dna):
 			num_of_nucleotides = {'A':0,'T':0,'C':0,'G':0}
 	for key,val in num_of_nucleotides.items(): 
 			num_of_nucleotides_file.write('{}:{}'.format(key,val) + ' ' + '\n')
-	return num_of_nucleotides_file
 	num_of_nucleotides_file.close()
 
 
