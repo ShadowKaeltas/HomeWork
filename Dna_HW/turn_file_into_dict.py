@@ -5,7 +5,12 @@ def turn_file_into_dict(file_):
 	for line in file_:
 		for letter in line:		
 			if letter != ' ' and n == 1:
-				_dict[key.strip()] = letter.strip()
+				if 'top' in key:
+					_dict[key.strip().strip('top')] = letter.strip()
+					_dict[previous_key.strip()] = 'Stop'
+				else:
+					_dict[key.strip()] = letter.strip()
+				previous_key = key
 				key = ''
 				n = 0
 			elif letter == ' ':
