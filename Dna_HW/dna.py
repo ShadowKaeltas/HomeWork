@@ -58,7 +58,7 @@ def translate_rna_to_protein(rna_):
 			for letter in line:
 				nucliotide += letter
 				nucliotide_count += 1 		
-				if 	nucliotide_count == 3	:
+				if nucliotide_count == 3	:
 					for key in codon_dict.keys():
 						if key == nucliotide:
 							protein.write(codon_dict[key]+'-')
