@@ -33,21 +33,4 @@ class Teacher():
 	def create_homework(self,text, days):
 		return homework(text, days)
 				
-if __name__ == '__main__':
-	teacher = Teacher('Daniil', 'Shadrin')
-	student = Student('Roman', 'Petrov')	
-	teacher.last_name
-	student.first_name
-	
-	expired_homework = teacher.create_homework('Learn functions', 0)
-	expired_homework.created
-	expired_homework.deadline
-	expired_homework.text
-	
-	create_homework_too = teacher.create_homework
-	oop_homework = create_homework_too('create 2 simple classes', 5)
-	oop_homework.deadline
-	
-	student.do_homework(oop_homework)
-	student.do_homework(expired_homework)
-	
+
