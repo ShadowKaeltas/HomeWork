@@ -9,7 +9,7 @@ def save_original_info(func):
 		wrapper.__doc__ = func.__doc__
 		wrapper.__original_func = func
 		return wrapper
-	return save_original
+	return save_inner_original
 
 def print_result(func):
 	@save_original_info(func)
