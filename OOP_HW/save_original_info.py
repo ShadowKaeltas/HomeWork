@@ -1,13 +1,13 @@
 import  functools 
 
-def save_original_info(func_1):
-	def save_original(func_2):
+def save_original_info(func):
+	def save_inner_original(inner_func):
 		def wrapper(*args, **kwargs):
 			"""Function-wrapper that saves information about original function"""
-			return func_2(*args, **kwargs)
-		wrapper.__name__ = func_1.__name__
-		wrapper.__doc__ = func_1.__doc__
-		wrapper.__original_func = func_1
+			return inner_func(*args, **kwargs)
+		wrapper.__name__ = func.__name__
+		wrapper.__doc__ = func.__doc__
+		wrapper.__original_func = func
 		return wrapper
 	return save_original
 
