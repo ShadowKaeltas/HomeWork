@@ -1,5 +1,6 @@
 from datetime import datetime, time, date
 
+
 class homework():	
 	
 	def __init__ (self, text, final):			
@@ -13,6 +14,7 @@ class homework():
 	def is_active(self):						
 		return self.deadline
 
+	
 class Student():
 	
 	def __init__(self, first_name, last_name):
@@ -24,7 +26,8 @@ class Student():
 			return homework
 		else:
 			return "You are late"
-			
+	
+	
 class Teacher():
 	def __init__(self, first_name, last_name):
 		self.first_name = first_name
