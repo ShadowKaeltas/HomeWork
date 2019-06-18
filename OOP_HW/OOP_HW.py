@@ -6,15 +6,18 @@ class homework():
 	def __init__ (self, text, final):			
 		self.text = text
 		self.created = datetime.now(tz = None)
-		self.deadline = datetime(self.created.year ,self.created.month,
-		 self.created.day + final, self.created.hour,
-		 self.created.minute, self.created.second,
-		 self.created.microsecond ) - self.created 			
+		self.deadline = datetime(
+			self.created.year, self.created.month,
+			self.created.day + final, self.created.hour, 
+			self.created.minute, self.created.second, 
+			self.created.microsecond,
+			) - self.created 			
 
-	def is_active(self):						
-		return self.deadline
+	def is_active(self):		
+		delta = datetime.now(tz = None)	- self.created 			
+		return self.deadline > delta
 
-	
+
 class Student():
 	
 	def __init__(self, first_name, last_name):
@@ -26,8 +29,8 @@ class Student():
 			return homework
 		else:
 			return "You are late"
-	
-	
+			
+			
 class Teacher():
 	def __init__(self, first_name, last_name):
 		self.first_name = first_name
@@ -35,5 +38,3 @@ class Teacher():
 		
 	def create_homework(self,text, days):
 		return homework(text, days)
-				
-
