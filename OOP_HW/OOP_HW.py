@@ -3,7 +3,7 @@ from datetime import datetime, time, date
 
 class homework():	
 	
-	def __init__ (self, text, final):			
+	def __init__(self, text, final):			
 		self.text = text
 		self.created = datetime.now(tz = None)
 		self.deadline = datetime(
@@ -24,7 +24,7 @@ class Student():
 		self.first_name = first_name
 		self.last_name = last_name
 		
-	def do_homework(self,homework):
+	def do_homework(self, homework):
 		if homework.is_active():
 			return homework
 		else:
@@ -36,5 +36,5 @@ class Teacher():
 		self.first_name = first_name
 		self.last_name = last_name
 		
-	def create_homework(self,text, days):
+	def create_homework(self, text, days):
 		return homework(text, days)
